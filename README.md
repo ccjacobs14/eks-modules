@@ -6,7 +6,7 @@
 
 ~~~
 module "eks-module" {
-  source         = "github.com/ccjacobs14/eks-moduless"
+  source         = "github.com/ccjacobs14/eks-modules"
   region         = "Enter your Providers region here"
   vpc_cidr       = "10.0.0.0/16"
   dns_hostnames  = true
