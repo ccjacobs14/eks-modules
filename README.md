@@ -1,4 +1,4 @@
-## MY TF MODULE TO PROVISION AN EKS CLUSTER WITH CUSTOM NETWORKING------->
+## MY TF EKS-MODULE TO PROVISION AN EKS CLUSTER WITH CUSTOM NETWORKING------->
 
 
 
@@ -6,7 +6,7 @@
 
 ~~~
 module "eks-module" {
-  source         = "github.com/ccjacobs14/module"
+  source         = "github.com/ccjacobs14/eks-module"
   region         = "Enter your Providers region here"
   vpc_cidr       = "10.0.0.0/16"
   dns_hostnames  = true
@@ -20,7 +20,7 @@ module "eks-module" {
   vpc_id         = "aws_vpc.eks_vpc.id"
   eks_version    = "1.29"
   ami_type       = "AL2_x86_64"
-  instance_types = ["t3.small", "t3.medium", "t3.large"]
+  instance_types = ["m5.large", "m5.large", "m5.large"]
   capacity_type  = "ON_DEMAND"
 
 }
