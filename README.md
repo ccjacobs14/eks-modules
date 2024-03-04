@@ -6,7 +6,8 @@
 
 ~~~
 module "eks-module" {
-  source         = "github.com/ccjacobs14/eks-modules"
+  source         = "app.terraform.io/c14-organization/eks-module/aws"
+  version        = "1.0.1"
   region         = "Enter your Providers region here"
   vpc_cidr       = "10.0.0.0/16"
   dns_hostnames  = true
